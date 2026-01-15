@@ -1,0 +1,16 @@
+---
+version: "2.1"
+services:
+  syslog-ng:
+    image: lscr.io/linuxserver/syslog-ng:latest
+    container_name: syslog-ng
+    environment:
+      - PUID=1000 # you can find User PUID and GUID by running command: id
+      - PGID=1000
+      - TZ=Etc/UTC
+    volumes:
+      - /app/syslog-ng/config:/config
+      - /app/log:/var/log
+    ports:
+      - 514:5514/udp
+    restart: unless-stopped
