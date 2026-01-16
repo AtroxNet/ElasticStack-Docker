@@ -2,7 +2,7 @@
 Run syslog-ng, filebeat, logstash, elasticsearch and kibana
 
 
-ElasticSearch and Kibana:
+ELASTICSEARCH and KIBANA:
 
 1- Go to directory, /Elastic_plus_Kibana/ and run below command to create Kibana and Elasticsearch containers:
 
@@ -24,6 +24,19 @@ New value: xxxyyyzzxyzrandompassword
 
 4- If you want to run Cluster, Deploy Elasticsearch and Kibana on couple of other Servers (as specified in docker-compose.yml file.
 
+LOGSTASH:
+
+1- Go to directory, /logstash/ and run below command to create Kibana and Elasticsearch containers:
+
+sudo /bin/docker compose up -d --build
+
+
+FILEBEAT:
+
+1- Go to directory, /logstash/ and run below command to create Kibana and Elasticsearch containers:
+
+sudo /bin/docker compose up -d --build
+
 
 SYSLOG_NG:
 
@@ -33,5 +46,6 @@ docker-compose up -d --build
 
 2- Modify syslog-ng.conf file under /syslog-ng/config/ to specify Source and Destination:
 ## we are saving syslogs to a Log file which will be consumed by filebeat, logstash, elasticsearch and kibana.
+
 
 
