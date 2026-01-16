@@ -3,7 +3,7 @@
 services:
   filebeat:
     image: filebeat:${ELASTIC_VERSION}
-    container_name: filebeat02
+    container_name: filebeat
     build:
       context: ./
       args:
